@@ -22,4 +22,4 @@ spec:
   selector:
     app: techtrends
   ## Define the Service type, here set to ClusterIP.
-  type: ClusterIP
+  type: {{ .Values.ClusterIP.type }}

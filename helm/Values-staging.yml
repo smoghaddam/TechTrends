@@ -18,6 +18,7 @@ ClusterIP:
   port: 5111
   protocol: TCP
   targetPort: 3111
+  type: ClusterIP
 
 ## set the Resources requests settings
 resources:
