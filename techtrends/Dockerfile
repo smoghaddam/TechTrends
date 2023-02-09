@@ -4,7 +4,7 @@ LABEL maintainer = "Sepid"
 
 COPY . /app
 WORKDIR /app
-RUN pip install -r requirements.txt
+RUN pip install -r ./techtrens/requirements.txt
 
 CMD python init_db.py ; python -u app.py
 
