@@ -1,5 +1,7 @@
 ![example workflow](https://github.com/smoghaddam/TechTrends/actions/workflows/techtrends-dockerhub.yml/badge.svg)
 
+[GitHub Repository](https://github.com/smoghaddam/TechTrends)
+
 # TechTreds Web Application
 
 This is a Flask application that lists the latest articles within the cloud-native ecosystem.

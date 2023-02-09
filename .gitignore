@@ -6,3 +6,5 @@
 __pycache__/
 .vagrant/
 techtrends/.docker_access_token
+screenshots/.DS_Store
+argocd/.argocd-u&p

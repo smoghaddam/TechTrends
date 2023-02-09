@@ -1,0 +1,17 @@
+## The chart API version
+apiVersion: v1
+## The name of the chart. 
+## In this case,  the chart name is`techtrends `.
+name: techtrends 
+## A single-sentence description of this project
+description: TechTrends Project
+## A list of keywords about this project to quickly identify the chart's capabilities.
+keywords:
+- Udacity
+- TechTrends 
+## The chart version, here set to `1.0.0`
+version: 1.0.0
+## List of maintainers, their names, and method of contact
+maintainers:
+- name: Sepid 
+  email: no@thanks.com
