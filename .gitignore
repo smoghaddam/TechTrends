@@ -5,3 +5,4 @@
 .myvenv/
 __pycache__/
 .vagrant/
+techtrends/.docker_access_token
