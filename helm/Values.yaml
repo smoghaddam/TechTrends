@@ -4,8 +4,7 @@ namespace:
 
 ## define the image to execute with the Deployment 
 image:
-  repository:
-     sepid/techtrends 
+  repository: sepid/techtrends 
   tag: latest
   imagePullPolicy: IfNotPresent
 
