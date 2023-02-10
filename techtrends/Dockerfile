@@ -4,8 +4,8 @@ LABEL maintainer = "Sepid"
 
 COPY . /app
 WORKDIR /app
-RUN pip install -r ./techtrends/requirements.txt
+RUN pip install -r requirements.txt
 
-CMD python ./techtrends/init_db.py ; python -u ./techtrends/app.py
+CMD python init_db.py ; python -u app.py
 
 EXPOSE 3111
