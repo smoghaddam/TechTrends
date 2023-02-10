@@ -6,6 +6,6 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r ./techtrends/requirements.txt
 
-CMD python init_db.py ; python -u app.py
+CMD python ./techtrends/init_db.py ; python -u ./techtrends/app.py
 
 EXPOSE 3111
