@@ -10,74 +10,85 @@ docker run -i -t -d -p 7111:3111 techtrends
 # DONE: insert the docker logs command
 docker ps
 CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                    NAMES
-f4fd4d1eb8ab   techtrends   "/bin/sh -c 'python …"   33 seconds ago   Up 32 seconds   0.0.0.0:7111->3111/tcp   happy_chatelet
+ebe62fa3de9c   techtrends   "/bin/sh -c 'python …"   7 minutes ago   Up 6 minutes   0.0.0.0:7111->3111/tcp   gallant_sutherland
 
-docker logs f4fd4d1eb8ab
+docker logs ebe62fa3de9c
 
 ## Logs from the container running the TechTrends application
 # DONE: paste logs from the Docker container 
-docker logs f4fd4d1eb8ab
+docker logs ebe62fa3de9c
 
  * Serving Flask app 'app' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
-WARNING:werkzeug: * Running on all addresses.
+2023-02-10 06:17:40 WARNING   * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+2023-02-10 06:17:40 INFO      * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
 The homepage has been retrieved.
-INFO:app:The homepage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:03] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:03] "GET /static/css/main.css HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:03] "GET /favicon.ico HTTP/1.1" 404 -
+2023-02-10 06:17:50 INFO     The homepage has been retrieved.
+2023-02-10 06:17:50 INFO     172.17.0.1 - - [10/Feb/2023 06:17:50] "GET / HTTP/1.1" 200 -
+2023-02-10 06:17:50 INFO     172.17.0.1 - - [10/Feb/2023 06:17:50] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:17:50 INFO     172.17.0.1 - - [10/Feb/2023 06:17:50] "GET /favicon.ico HTTP/1.1" 404 -
 The <<2020 CNCF Annual Report>> post has been retrieved.
-INFO:app:The <<2020 CNCF Annual Report>> post has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:07] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:07] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:18:13 INFO     The <<2020 CNCF Annual Report>> post has been retrieved.
+2023-02-10 06:18:13 INFO     172.17.0.1 - - [10/Feb/2023 06:18:13] "GET /1 HTTP/1.1" 200 -
+2023-02-10 06:18:13 INFO     172.17.0.1 - - [10/Feb/2023 06:18:13] "GET /static/css/main.css HTTP/1.1" 304 -
 The about webpage has been retrieved.
-INFO:app:The about webpage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:09] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:10] "GET /static/css/main.css HTTP/1.1" 304 -
-The homepage has been retrieved.
-INFO:app:The homepage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:12] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:12] "GET /static/css/main.css HTTP/1.1" 304 -
-The <<CNCF Cloud Native Interactive Landscape>> post has been retrieved.
-INFO:app:The <<CNCF Cloud Native Interactive Landscape>> post has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:15] "GET /4 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:15] "GET /static/css/main.css HTTP/1.1" 304 -
-The homepage has been retrieved.
-INFO:app:The homepage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:17] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:17] "GET /static/css/main.css HTTP/1.1" 304 -
-The <<Kubernetes Certification>> post has been retrieved.
-INFO:app:The <<Kubernetes Certification>> post has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:19] "GET /6 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:19] "GET /static/css/main.css HTTP/1.1" 304 -
-The homepage has been retrieved.
-INFO:app:The homepage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:20] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:20] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:22] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:22] "GET /static/css/main.css HTTP/1.1" 304 -
-The <<Docker>> post has been created successfully.
-INFO:app:The <<Docker>> post has been created successfully.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:42] "POST /create HTTP/1.1" 302 -
-The homepage has been retrieved.
-INFO:app:The homepage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:42] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:42] "GET /static/css/main.css HTTP/1.1" 304 -
-The <<Docker>> post has been retrieved.
-INFO:app:The <<Docker>> post has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:46] "GET /7 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:46] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:19:36 INFO     The about webpage has been retrieved.
+2023-02-10 06:19:36 INFO     172.17.0.1 - - [10/Feb/2023 06:19:36] "GET /about HTTP/1.1" 200 -
+2023-02-10 06:19:36 INFO     172.17.0.1 - - [10/Feb/2023 06:19:36] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:19:37 INFO     172.17.0.1 - - [10/Feb/2023 06:19:37] "GET /create HTTP/1.1" 200 -
+2023-02-10 06:19:37 INFO     172.17.0.1 - - [10/Feb/2023 06:19:37] "GET /static/css/main.css HTTP/1.1" 304 -
+Healthz request successful
+2023-02-10 06:19:43 INFO     Healthz request successful
+2023-02-10 06:19:43 INFO     172.17.0.1 - - [10/Feb/2023 06:19:43] "GET /healthz HTTP/1.1" 200 -
+2023-02-10 06:19:50 INFO     172.17.0.1 - - [10/Feb/2023 06:19:50] "GET /metric HTTP/1.1" 404 -
+Metrics request successfull.
+2023-02-10 06:19:53 INFO     Metrics request successfull.
+2023-02-10 06:19:53 INFO     172.17.0.1 - - [10/Feb/2023 06:19:53] "GET /metrics HTTP/1.1" 200 -
+Post not found!
+2023-02-10 06:19:57 WARNING  Post not found!
+2023-02-10 06:19:57 INFO     172.17.0.1 - - [10/Feb/2023 06:19:57] "GET /7777 HTTP/1.1" 404 -
+2023-02-10 06:19:57 INFO     172.17.0.1 - - [10/Feb/2023 06:19:57] "GET /static/css/main.css HTTP/1.1" 304 -
 The about webpage has been retrieved.
-INFO:app:The about webpage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:48] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:44:48] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:20:00 INFO     The about webpage has been retrieved.
+2023-02-10 06:20:00 INFO     172.17.0.1 - - [10/Feb/2023 06:20:00] "GET /about HTTP/1.1" 200 -
+2023-02-10 06:20:00 INFO     172.17.0.1 - - [10/Feb/2023 06:20:00] "GET /static/css/main.css HTTP/1.1" 304 -
+The about webpage has been retrieved.
+2023-02-10 06:23:33 INFO     The about webpage has been retrieved.
+2023-02-10 06:23:33 INFO     172.17.0.1 - - [10/Feb/2023 06:23:33] "GET /about HTTP/1.1" 200 -
+2023-02-10 06:23:33 INFO     172.17.0.1 - - [10/Feb/2023 06:23:33] "GET /static/css/main.css HTTP/1.1" 304 -
 The homepage has been retrieved.
-INFO:app:The homepage has been retrieved.
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:47:49] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:47:49] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [08/Feb/2023 22:50:23] "GET /INVALID_URL HTTP/1.1" 404 -
+2023-02-10 06:23:35 INFO     The homepage has been retrieved.
+2023-02-10 06:23:35 INFO     172.17.0.1 - - [10/Feb/2023 06:23:35] "GET / HTTP/1.1" 200 -
+2023-02-10 06:23:35 INFO     172.17.0.1 - - [10/Feb/2023 06:23:35] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:25:45 INFO     172.17.0.1 - - [10/Feb/2023 06:25:45] "GET /create HTTP/1.1" 200 -
+2023-02-10 06:25:45 INFO     172.17.0.1 - - [10/Feb/2023 06:25:45] "GET /static/css/main.css HTTP/1.1" 304 -
+The <<New Trends>> post has been created successfully.
+2023-02-10 06:25:59 INFO     The <<New Trends>> post has been created successfully.
+2023-02-10 06:25:59 INFO     172.17.0.1 - - [10/Feb/2023 06:25:59] "POST /create HTTP/1.1" 302 -
+The homepage has been retrieved.
+2023-02-10 06:25:59 INFO     The homepage has been retrieved.
+2023-02-10 06:25:59 INFO     172.17.0.1 - - [10/Feb/2023 06:25:59] "GET / HTTP/1.1" 200 -
+2023-02-10 06:25:59 INFO     172.17.0.1 - - [10/Feb/2023 06:25:59] "GET /static/css/main.css HTTP/1.1" 304 -
+The <<New Trends>> post has been retrieved.
+2023-02-10 06:26:02 INFO     The <<New Trends>> post has been retrieved.
+2023-02-10 06:26:02 INFO     172.17.0.1 - - [10/Feb/2023 06:26:02] "GET /7 HTTP/1.1" 200 -
+2023-02-10 06:26:02 INFO     172.17.0.1 - - [10/Feb/2023 06:26:02] "GET /static/css/main.css HTTP/1.1" 304 -
+Post not found!
+2023-02-10 06:26:07 WARNING  Post not found!
+2023-02-10 06:26:07 INFO     172.17.0.1 - - [10/Feb/2023 06:26:07] "GET /70 HTTP/1.1" 404 -
+2023-02-10 06:26:07 INFO     172.17.0.1 - - [10/Feb/2023 06:26:07] "GET /static/css/main.css HTTP/1.1" 304 -
+The about webpage has been retrieved.
+2023-02-10 06:26:09 INFO     The about webpage has been retrieved.
+2023-02-10 06:26:09 INFO     172.17.0.1 - - [10/Feb/2023 06:26:09] "GET /about HTTP/1.1" 200 -
+2023-02-10 06:26:09 INFO     172.17.0.1 - - [10/Feb/2023 06:26:09] "GET /static/css/main.css HTTP/1.1" 304 -
+2023-02-10 06:26:14 INFO     172.17.0.1 - - [10/Feb/2023 06:26:14] "GET /metric HTTP/1.1" 404 -
+Metrics request successfull.
+2023-02-10 06:26:16 INFO     Metrics request successfull.
+2023-02-10 06:26:16 INFO     172.17.0.1 - - [10/Feb/2023 06:26:16] "GET /metrics HTTP/1.1" 200 -
+Healthz request successful
+2023-02-10 06:26:22 INFO     Healthz request successful
+2023-02-10 06:26:22 INFO     172.17.0.1 - - [10/Feb/2023 06:26:22] "GET /healthz HTTP/1.1" 200 -
