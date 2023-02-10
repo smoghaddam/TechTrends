@@ -4,6 +4,8 @@ namespace:
 
 ## define the image to execute with the Deployment 
 image:
+  repository: sepid/techtrends
+  tag: latest
   imagePullPolicy: Always
 
 
@@ -13,6 +15,9 @@ replicaCount: 5
 ## set the ClusterIP settings
 ClusterIP:
   port: 7111
+  protocol: TCP
+  targetPort: 3111
+  type: ClusterIP
 
 ## set the Resources requests settings
 resources:
@@ -22,3 +27,14 @@ resources:
   limits:
     memory: "256Mi"
     cpu: "500m"
+
+## set the Containers settings
+Containers:
+  containerPort: 3111
+  protocol: TCP
+  livenessProbe:
+      path: /healthz
+      port: 3111
+  readinessProbe:
+      path: /healthz
+      port: 3111
